@@ -46,20 +46,22 @@ form{
           display: flex;
           flex-direction: row;
           align-items: center;
+          padding-top: 0.25em;
           
 }
 .box input{
-display: block;
-margin-left: 10px;
-          margin-bottom: 10px;
+          display: block;
+          margin-left: 13px;
+          margin-bottom: 1px;
           border-radius: 10px;
           width: 160px;
           height: 50px;
           background: #ffffff;
           color: rgb(0, 0, 0);
           border: none;
-          font-size: 1.5em;
+          font-size: 1.7em;
           font-weight: bold;
+          font-family: 'Cambria';
 }
 .box input:hover{
           background: var(--p-01);
@@ -75,3 +77,6 @@ margin-left: 10px;
         font-weight: bold;
         
     }
+.tela p{
+    padding-top: 0.175em;
+}
