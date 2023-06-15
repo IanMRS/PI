@@ -17,9 +17,11 @@
        --p-12: rgba(19,121,36,255);
        --p-13: rgba(20,124,38,255);
        --p-14: rgba(21,126,40,255);
+       --p-15: rgb(81, 114, 69);
+
 }
 body{
-          background: rgb(186, 187, 188);
+    background:var(--p-15);
           width: 100%;
           height: 100%;
 }
@@ -34,7 +36,7 @@ form{
           position: absolute;
           top: 50%;
           left: 50%;
-          background: linear-gradient(to bottom,var(--p-14),var(--p-02),var(--p-06));
+          background: var(--p-01);
           transform: translate(-50%, -50%);
           padding: 3em;
           border-radius: 10px 40px;
