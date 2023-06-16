@@ -1,25 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-          <meta charset="UTF-8">
-          <meta http-equiv="X-UA-Compatible" content="IE=edge">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>SISTEMA DE REQUIRIMENTOS</title>
-          <link rel="stylesheet" href="style.css">
-</head>
-<body>
-          <form action="redirecionar.php" method="post">
-                    <div class="container"> 
-                              <div class="tela">
-                                        <p>Identifique-se</p>
-                              </div>
-                              <div class="box">
-                                        <input type="submit" value="DOCENTE" name="DOCENTE">
-                                        <input type="submit" value="DISCENTE" name="DISCENTE">
-                                        <input type="submit" value="CORES" name="CORES">
-                              </div>
-                    </div>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Geral</title>
 
-          </form>
-</body>
+</head>
+<link rel="stylesheet" href="style.css">
+    <body class="flex">
+    <form method="post" action="redirecionar.php">
+        <div class="container">
+        <h1>Login</h1>
+    <div class="input">
+        <input type="text" required>
+        <label>Usuário:</label>
+    </div>
+    <div class="input">
+        <input type="password" required>
+        <label>Senha:</label>
+    </div>  
+    <input type="checkbox">
+    <label>Lembrar-se</label>
+    <br>
+    <div class="forgot"> <a href="forgot"></a> Esqueceu a senha?</div>
+    <button class="submit">Enviar</button>
+    <div class="line"></div>
+    <div class="signup"><a href="SIGNUP/index.html">Faça sua conta</a></div>
+    </div></form>
+    </body>
 </html>

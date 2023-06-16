@@ -3,7 +3,7 @@
           padding: 0;
           box-sizing: border-box;
 }
-:root{ --p-01: rgb(14, 167, 14);
+:root{ --p-01: rgb(81, 114, 69);
        --p-02: rgb(16,108,32);
        --p-03: rgb(15,116,34);
        --p-04: rgb(12,100,28);
@@ -11,13 +11,9 @@
        --p-06: rgb(9, 86, 20);
        --p-07: rgb(8, 80, 16);
        --p-08: rgb(6, 74, 12);
-       --p-09: rgba(17,117,34,255);
-       --p-10: rgb(4,68,12);
-       --p-11: rgb(6, 74, 12);
-       --p-12: rgba(19,121,36,255);
-       --p-13: rgba(20,124,38,255);
-       --p-14: rgba(21,126,40,255);
-       --p-15: rgb(81, 114, 69);
+       --p-09: rgb(4,68,12);
+       --p-10: rgb(6, 74, 12);
+       
 
 }
 body{
@@ -82,3 +78,63 @@ form{
 .tela p{
     padding-top: 0.175em;
 }
+
+/*Tudo sobre o dropdown --- do SIGNUP  */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-button {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 2% 4%;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 4% 2%;
+    z-index: 1;
+  }
+  
+  .dropdown-content form {
+    width: 100%;
+  }
+  
+  .dropdown-content label {
+    display: block;
+    margin-bottom: 3%;
+  }
+  
+  .dropdown-content input,
+  .dropdown-content select {
+    width: 100%;
+    padding: 2%;
+    margin-bottom: 5%;
+  }
+  
+  .dropdown-content input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 4% 8%;
+    cursor: pointer;
+  }
+  
+  .dropdown-content input[type="submit"]:hover {
+    background-color: #555;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /*ACABA AQUI O DROPDOWN*/
