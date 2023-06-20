@@ -1,32 +1,181 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Geral</title>
-
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        
 </head>
-<link rel="stylesheet" href="style.css">
-    <body class="flex">
-    <form method="post" action="redirecionar.php">
-        <div class="container">
-        <h1>Login</h1>
-    <div class="input">
-        <input type="text" required>
-        <label>Usuário:</label>
+<body>
+    <div class="container">
+        <div class="content first-content">
+            <div class="first-column">
+
+                <h2 class="title title-primary">Olá novamente!</h2>
+                <p class="description description-primary">Efetue seu login ao lado</p>
+                <br>
+                <p class="description description-primary">Caso ainda não tenha efetuado seu cadastro, aperte no botão abiaxo</p>
+                <button id="signup" class="btn btn-primary">sign up</button>
+            </div> 
+
+            <div class="second-column signin">
+                <h2 class="title title-second">Efetue seu login</h2>
+                <p class="description description-second">Número de SIAPE ou Matrícula:</p>
+                <form class="form">
+                
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="email" placeholder="E-mail">
+                    </label>
+                
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder="Senha">
+                    </label>
+                
+                    <a class="password" href="#">forgot your password?</a>
+                    <button class="btn btn-second">sign in</button>
+                </form>
+            </div><!-- second column -->
+        </div><!-- first content -->
+
+
+        <div class="content second-content">
+            <div class="first-column">
+                <h2 class="title title-primary">seja bem-vindx!</h2>
+                <p class="description description-primary">Realize seu cadastro selecionando qual a seu ...</p>
+                <br>
+                <p class="description description-primary">Caso já tenha login, selecione botão abaixo</p>
+                <button id="signin" class="btn btn-primary">sign in</button>
+
+            </div>
+            
+<div class="second-column create">
+    <div class="linha"></div>
+    <div class="dropdown">
+    <button class="dropdown-button" onclick="toggleDropdown()">DISCENTE</button>
+    <div class="dropdown-content" id="dropdown-content-1">
+      <form method="post" action="signup_discente.php">
+        <div class="box_signup">
+          <div class="input">
+            <label>Nome:</label>
+            <input type="text" name="nome" required>
+            
+          </div>
+          <div class="input">
+            <label>E-mail institucional:</label>
+            <input type="email" name="email" required>
+            
+          </div>
+          <div class="input">
+            <label for="CURSO">Cursos:</label>
+            <select id="cursos" name="cursos" required>
+              <option value="EI">Informática</option>
+              <option value="ED">Edificações</option>
+              <option value="EMA">Meio-Ambiente</option>
+            </select>
+          </div>
+          <div class="input">
+            <label>Turma:</label>
+            <select id="turma" name="turma" required>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="31">31</option>
+              <option value="32">32</option>
+              <option value="41">41</option>
+            </select>
+            
+          </div>
+          <div class="input">
+            <label>Telefone:</label>
+            <input type="text" name="tell" required>
+            
+          </div>
+          <div class="input">
+            <label>N° de Matrícula:</label>
+            <input type="text" name="matricula" required>
+            
+          </div>
+          <div class="input">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+            
+            <br>
+            <label for="confirmar-senha">Confirmar senha:</label>
+            <input type="password" id="confirmar-senha" name="confirmar-senha">
+            <p id="mensagem-senha"></p>
+          </div>
+          <input type="submit" name="enviar">
+        </div>
+      </form>
     </div>
-    <div class="input">
-        <input type="password" required>
-        <label>Senha:</label>
-    </div>  
-    <input type="checkbox">
-    <label>Lembrar-se</label>
-    <br>
-    <div class="forgot"> <a href="forgot"></a> Esqueceu a senha?</div>
-    <button class="submit">Enviar</button>
-    <div class="line"></div>
-    <div class="signup"><a href="SIGNUP/index.html">Faça sua conta</a></div>
-    </div></form>
-    </body>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-button" onclick="toggleDropdown()">DOCENTE</button>
+    <div class="dropdown-content" id="dropdown-content-2"> <!--As duas dropdowns agora têm seus próprios IDs únicos: dropdown-content-1 e dropdown-content-2-->
+      <form method="post" action="signup_docente.php">
+        <div class="box_signup">
+          <div class="input">
+            <label>SIAPE:</label>
+            <input type="text" name="SIAPE" required>
+            
+          </div>
+          <div class="input">
+            <label>Nome:</label>
+            <input type="text" name="nome" required>
+            
+          </div>
+          <div class="input">
+            <label>E-mail:</label>
+
+                    <input type="email" name="email" required>
+                    
+                  </div>
+                  <div class="input">
+                    <label for="curso">Curso responsável:</label>
+                    <select id="cursos" name="cursos" required>
+                      <option value="EI">Informática</option>
+                      <option value="ED">Edificações</option>
+                      <option value="EMA">Meio-Ambiente</option>
+                    </select>
+                    
+                  </div>
+                  <div class="input">
+                    <label>Nome de Usuário:</label>
+                    <input type="text" name="usario" required>
+                    
+                  </div>
+                  <div class="input">
+                    
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required>
+                    <br>
+                    
+                    <label for="confirmar-senha">Confirmar senha:</label>
+                    <input type="password" id="confirmar-senha" name="confirmar-senha">
+                    <p id="mensagem-senha"></p>
+                  </div>
+                  <input type="submit" name="enviar">
+                </div>
+              </form>
+            </div>
+          </div>
+
+
+            </div><!-- second column -->
+        </div><!-- second-content -->
+    </div>
+    <script src="JS/comeco.js"></script>
+    
+</body>
 </html>
+
+
+

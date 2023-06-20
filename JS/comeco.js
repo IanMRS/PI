@@ -1,3 +1,17 @@
+var btnSignin = document.querySelector("#signin");
+var btnSignup = document.querySelector("#signup");
+
+var body = document.querySelector("body");
+
+
+btnSignin.addEventListener("click", function () {
+   body.className = "sign-up-js"; 
+});
+
+btnSignup.addEventListener("click", function () {
+    body.className = "sign-in-js";
+})
+
 function toggleDropdown() {
           const dropdown = document.querySelector('.dropdown');
           dropdown.classList.toggle('show');
@@ -23,5 +37,5 @@ function toggleDropdown() {
         
         senhaInput.addEventListener('input', verificarSenha);
         confirmarSenhaInput.addEventListener('input', verificarSenha);
-        
-        
+
+
