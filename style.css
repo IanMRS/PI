@@ -17,16 +17,17 @@
        --p-12: rgba(19,121,36,255);
        --p-13: rgba(20,124,38,255);
        --p-14: rgba(21,126,40,255);
-       --p-15: rgb(81, 114, 69);
+       --p-15: #7ED957;
+       --p-16: #0097B2;
 
 }
 body{
-    background:var(--p-15);
-          width: 100%;
-          height: 100%;
+        background:linear-gradient(var(--p-16), var(--p-15)) ;
+        width: 100%;
+        height: 100%;
 }
 form{
-          display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
